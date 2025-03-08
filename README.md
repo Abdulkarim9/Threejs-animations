@@ -2,8 +2,6 @@
 
 A Three.js visualization featuring a smooth morphing 3D blob with neon gradient colors that shift dynamically. The shape floats in space with soft lighting effects and small glowing particles orbiting around it.
 
-![Morphing Neon Blob](preview.png)
-
 ## Features
 
 - **Morphing Blob**: A smooth, continuously morphing 3D shape using simplex noise
