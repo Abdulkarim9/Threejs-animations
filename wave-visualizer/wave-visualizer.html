@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wave Visualizer</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        canvas {
+            display: block;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 10;
+        }
+        .controls label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .controls input {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .controls button {
+            background: linear-gradient(to right, #3f51b5, #e91e63);
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 5px;
+            transition: opacity 0.2s;
+        }
+        .controls button:hover {
+            opacity: 0.9;
+        }
+        .info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="enableAudio" />
+            Enable Audio Reactivity
+        </label>
+        <label>
+            <input type="checkbox" id="enableMouseReactivity" checked />
+            Enable Mouse Reactivity
+        </label>
+        <label>
+            Wave Intensity:
+            <input type="range" id="waveIntensity" min="0" max="100" value="50" />
+        </label>
+        <label>
+            Wave Speed:
+            <input type="range" id="waveSpeed" min="0" max="100" value="50" />
+        </label>
+        <button id="audioFileButton">Upload Audio File</button>
+        <input type="file" id="audioFileInput" accept="audio/*" style="display: none;" />
+    </div>
+    
+    <div class="info">
+        Move mouse to interact | Scroll to zoom
+    </div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="./js/wave-visualizer.js"></script>
+</body>
+</html> 

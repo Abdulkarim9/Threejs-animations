@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three.js Animations Collection</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #eee;
+        }
+        
+        header {
+            background: linear-gradient(to right, #30cfd0, #330867);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        
+        .animations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .animation-card {
+            background-color: #1e1e1e;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .animation-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        
+        .card-image {
+            height: 200px;
+            background-color: #2a2a2a;
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #333;
+        }
+        
+        .card-content {
+            padding: 1.5rem;
+        }
+        
+        .card-content h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        
+        .card-content p {
+            margin-bottom: 1.5rem;
+            color: #aaa;
+            line-height: 1.6;
+        }
+        
+        .card-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            background: linear-gradient(to right, #30cfd0, #330867);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: opacity 0.3s ease;
+        }
+        
+        .card-link:hover {
+            opacity: 0.9;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            background-color: #1a1a1a;
+            color: #888;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Three.js Animations Collection</h1>
+        <p>A gallery of creative 3D web animations</p>
+    </header>
+    
+    <div class="container">
+        <div class="animations-grid">
+            <!-- Morphing Neon Blob Card -->
+            <div class="animation-card">
+                <div class="card-image" style="background-image: url('morphing-neon-blob/preview.png'); background-color: #330867;"></div>
+                <div class="card-content">
+                    <h2>Morphing Neon Blob</h2>
+                    <p>A smooth morphing 3D blob with neon gradient colors that shift dynamically, floating in space with soft lighting effects and glowing particles.</p>
+                    <a href="morphing-neon-blob/morphing-neon-blob.html" class="card-link">View Animation</a>
+                </div>
+            </div>
+            
+            <!-- Crystal Reflections Card -->
+            <div class="animation-card">
+                <div class="card-image" style="background-image: url('crystal-reflections/preview.png'); background-color: #0055aa;"></div>
+                <div class="card-content">
+                    <h2>Crystal Reflections</h2>
+                    <p>A highly detailed 3D crystal structure with transparent, reflective surfaces that refract light and produce rainbow-like reflections as it slowly rotates.</p>
+                    <a href="crystal-reflections/crystal-reflections.html" class="card-link">View Animation</a>
+                </div>
+            </div>
+            
+            <!-- Wave Visualizer Card -->
+            <div class="animation-card">
+                <div class="card-image" style="background-image: url('wave-visualizer/preview.png'); background-color: #3f51b5;"></div>
+                <div class="card-content">
+                    <h2>Wave Visualizer</h2>
+                    <p>A fluid, organic wave surface that reacts to music and mouse movement, with dynamic color transitions between blues, purples, and reds.</p>
+                    <a href="wave-visualizer/wave-visualizer.html" class="card-link">View Animation</a>
+                </div>
+            </div>
+            
+            <!-- Liquid Metal Morph Card -->
+            <div class="animation-card">
+                <div class="card-image" style="background-image: url('liquid-metal-morph/preview.png'); background-color: #888888;"></div>
+                <div class="card-content">
+                    <h2>Liquid Metal Morph</h2>
+                    <p>A 3D liquid metal shape that constantly transforms between different abstract forms, with a highly reflective mercury-like surface that shifts seamlessly.</p>
+                    <a href="liquid-metal-morph/liquid-metal-morph.html" class="card-link">View Animation</a>
+                </div>
+            </div>
+            
+            <!-- Add more animation cards here as you create them -->
+            
+        </div>
+    </div>
+    
+    <footer>
+        <p>Created with Three.js | &copy; 2023 Three.js Animations Collection</p>
+    </footer>
+</body>
+</html> 

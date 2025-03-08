@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liquid Metal Morph</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+        canvas {
+            display: block;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 15px;
+            border-radius: 8px;
+            z-index: 10;
+        }
+        .controls label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .controls input {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .controls select {
+            background-color: #333;
+            color: white;
+            padding: 5px;
+            border: none;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+        .info {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: white;
+            font-family: 'Arial', sans-serif;
+            font-size: 14px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="controls">
+        <label>
+            <input type="checkbox" id="autoMorph" checked />
+            Auto Morph
+        </label>
+        <label>
+            Morph Speed:
+            <input type="range" id="morphSpeed" min="0" max="100" value="50" />
+        </label>
+        <label>
+            Surface Turbulence:
+            <input type="range" id="turbulence" min="0" max="100" value="30" />
+        </label>
+        <label>
+            Shape:
+            <select id="shapeSelect">
+                <option value="random">Random Morph</option>
+                <option value="sphere">Sphere</option>
+                <option value="torus">Torus</option>
+                <option value="cube">Cube</option>
+                <option value="cone">Cone</option>
+                <option value="abstract">Abstract</option>
+            </select>
+        </label>
+        <label>
+            Metal Color:
+            <select id="colorSelect">
+                <option value="mercury">Mercury</option>
+                <option value="gold">Gold</option>
+                <option value="copper">Copper</option>
+                <option value="chrome">Chrome</option>
+                <option value="iridescent">Iridescent</option>
+            </select>
+        </label>
+    </div>
+    
+    <div class="info">
+        Click and drag to rotate view | Scroll to zoom
+    </div>
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="./js/liquid-metal-morph.js"></script>
+</body>
+</html> 
