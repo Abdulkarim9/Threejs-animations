@@ -5,7 +5,7 @@ A showcase of stunning 3D web animations created with AI assistance. Each animat
 <<<<<<< HEAD
 ## Features
 =======
-![Animation Collection](collection-preview.jpg)
+![Animation Collection](preview.jpg)
 
 ## Journey Through Digital Dimensions
 >>>>>>> a720873 (Added preview image)
